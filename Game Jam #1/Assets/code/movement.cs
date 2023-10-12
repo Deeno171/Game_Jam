@@ -4,31 +4,38 @@ using UnityEngine;
 
 public class movement : MonoBehaviour
 {
-    // Start is called before the first frame update
+        public float xmul;
+    private float xvel;
+    private float yvel;
+    public float high;
+    public float thrust = 5.0f;
+    public Rigidbody rb;
+
     void Start()
     {
-        
+        rb = GetComponent<Rigidbody>();
+        rb.AddForce(thrust, 0, 0, ForceMode.Impulse);
+        //rb = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
-    public float xmul;
-    private float xvel;
-    private float yvel;
     void Update()
     {
         if (Input.GetKey("d"))
         {
-            transform.Translate(Vector3.right*xmul);
+            rb.AddForce(new Vector3(xmul, 0, 0));
+            //transform.Translate(Vector3.right*xmul);
             xvel+=xmul;
         }
         if (Input.GetKey("a"))
         {
-            transform.Translate(Vector3.left*xmul);
+            rb.AddForce(new Vector3(-1*xmul, 0, 0));
+            //transform.Translate(Vector3.left*xmul);
             xvel-=xmul;
         }
         if (Input.GetKeyDown("space"))
         {
-            transform.Translate(Vector3.up*5);
+            rb.AddForce(new Vector3(0, high, 0));
         }
         //transform.ranslate(Vector3.right*xvel);
     }
