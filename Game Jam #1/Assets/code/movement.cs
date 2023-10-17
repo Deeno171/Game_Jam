@@ -10,7 +10,7 @@ public class movement : MonoBehaviour
     public float high;
     public float thrust = 5.0f;
     public Rigidbody rb;
-
+    private int ground = 1;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -33,10 +33,12 @@ public class movement : MonoBehaviour
             //transform.Translate(Vector3.left*xmul);
             xvel-=xmul;
         }
-        if (Input.GetKeyDown("space"))
+        if (Input.GetKeyDown("space") && ground == 1)
         {
+            ground = 0;
             rb.AddForce(new Vector3(0, high, 0));
         }
+        //function OnCollisionEnter2D (col : Collision2D){ ground = 1;}
         //transform.ranslate(Vector3.right*xvel);
     }
 }
