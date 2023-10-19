@@ -35,7 +35,7 @@ public class movement : MonoBehaviour
         }
         if (Input.GetKeyDown("space") && ground == 1)
         {
-            ground = 0;
+            //ground = 0;
             rb.AddForce(new Vector3(0, high, 0));
         }
         //function OnCollisionEnter2D (col : Collision2D){ ground = 1;}
