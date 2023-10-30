@@ -1,40 +1,40 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlatformMover : MonoBehaviour
 {
-    public Transform pointA;
-    public Transform pointB;
-    public float speed = 2.0f;
+    public Transform positionA; // The starting position
+    public Transform positionB; // The ending position
+    public float speed = 2.0f;  // The movement speed
 
     private Vector3 targetPosition;
 
-    void Start()
+    private void Start()
     {
-        targetPosition = pointB.position;
+        targetPosition = positionB.position;
     }
 
-    void Update()
+    private void Update()
     {
-        MovePlatform();
-    }
+        // Move the platform towards the target position
+        transform.position = Vector3.MoveTowards(transform.position, targetPosition, speed * Time.deltaTime);
 
-    void MovePlatform()
-    {
-        float step = speed * Time.deltaTime;
-        transform.position = Vector3.MoveTowards(transform.position, targetPosition, step);
-
+        // Check if the platform has reached the target position
         if (Vector3.Distance(transform.position, targetPosition) < 0.01f)
         {
-            // If the platform reaches the target position, switch to the other target.
-            if (targetPosition == pointA.position)
+            // Ensure the platform stops exactly at the target position
+            transform.position = targetPosition;
+
+            // Swap the target position to create a continuous movement
+            if (targetPosition == positionA.position)
             {
-                targetPosition = pointB.position;
+                targetPosition = positionB.position;
+                Debug.Log("target position = pos_b");
             }
             else
             {
-                targetPosition = pointA.position;
+                targetPosition = positionA.position;
+                Debug.Log("target position = pos_a");
             }
         }
     }

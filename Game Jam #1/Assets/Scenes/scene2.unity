@@ -382,6 +382,20 @@ MonoBehaviour:
   high: 700
   thrust: 0
   rb: {fileID: 0}
+--- !u!114 &134199994
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 134199987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44d41530a13c648969e0ec7ca3065df4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextSceneName: scene3
+  triggerPosition: {x: 0, y: 0}
 --- !u!1 &240137850
 GameObject:
   m_ObjectHideFlags: 0
@@ -965,6 +979,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1112338128624330, guid: e7965cb5f3b6b49439772edd4131b2b0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 134199993}
+    - targetCorrespondingSourceObject: {fileID: 1112338128624330, guid: e7965cb5f3b6b49439772edd4131b2b0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 134199994}
   m_SourcePrefab: {fileID: 100100000, guid: e7965cb5f3b6b49439772edd4131b2b0, type: 3}
 --- !u!1 &1444349333 stripped
 GameObject:
