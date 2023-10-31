@@ -19,19 +19,19 @@ public class AnimationController : MonoBehaviour
 
         if (horizontalInput > 0)
         {
-            // Start walking to the right
+           
             SetWalking(true);
             FlipCharacter(true);
         }
         else if (horizontalInput < 0)
         {
-            // Start walking to the left
+       
             SetWalking(true);
             FlipCharacter(false);
         }
         else
         {
-            // Stop walking
+            
             SetWalking(false);
         }
     }
@@ -39,7 +39,7 @@ public class AnimationController : MonoBehaviour
     void SetWalking(bool walking)
     {
         isWalking = walking;
-        anim.SetBool("IsWalking", isWalking); // Set the animator parameter to trigger the transition.
+        anim.SetBool("IsWalking", isWalking); 
     }
 
     void FlipCharacter(bool faceRight)
