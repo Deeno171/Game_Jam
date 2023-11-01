@@ -1,29 +1,19 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using System.Collections;
-
 
 public class SceneTransition : MonoBehaviour
 {
     public string nextSceneName; // Name of the scene to transition to.
-    [SerializeField] Animator transitionAnim;
+    public Vector2 triggerPosition; // Position where the transition should be triggered.
 
-    public Transform targetPosition; // Set this in the Inspector
-
-    private void OnTriggerEnter(Collider other)
+    private void Update()
     {
-        if (other.CompareTag("Player") && transform.position == targetPosition.position)
+        // Check if the player has reached the trigger position (both X and Y).
+        if (transform.position.x >= triggerPosition.x && transform.position.y >= triggerPosition.y)
         {
-            StartCoroutine(TransitionAndPlayAnimation());
+            // Load the next scene.
+            SceneManager.LoadScene(nextSceneName);
         }
     }
-    IEnumerator TransitionAndPlayAnimation()
-    {
-        transitionAnim.SetTrigger("End");
-        yield return new WaitForSeconds(2.0f);
-        SceneManager.LoadScene(nextSceneName);
-        transitionAnim.SetTrigger("Start");
-    }
-
-    
 }
+
