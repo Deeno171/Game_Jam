@@ -5582,6 +5582,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1112338128624330, guid: e7965cb5f3b6b49439772edd4131b2b0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 428070332}
+    - targetCorrespondingSourceObject: {fileID: 1112338128624330, guid: e7965cb5f3b6b49439772edd4131b2b0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 428070335}
   m_SourcePrefab: {fileID: 100100000, guid: e7965cb5f3b6b49439772edd4131b2b0, type: 3}
 --- !u!1 &428070331 stripped
 GameObject:
@@ -5654,12 +5657,18 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.6211483, y: 0.4, z: 0.2606681}
   m_Center: {x: -0.18942896, y: 0.2, z: -0.007654596}
+<<<<<<< Updated upstream
 --- !u!1 &462486893
 GameObject:
+=======
+--- !u!114 &428070335
+MonoBehaviour:
+>>>>>>> Stashed changes
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
   serializedVersion: 6
   m_Component:
   - component: {fileID: 462486894}
@@ -5685,6 +5694,14 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1357313724}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+  m_GameObject: {fileID: 428070331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 196a05de9fdb24e7c90edd0e78653755, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+>>>>>>> Stashed changes
 --- !u!1 &712210813
 GameObject:
   m_ObjectHideFlags: 0

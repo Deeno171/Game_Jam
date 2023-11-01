@@ -39,7 +39,7 @@ public class AnimationController : MonoBehaviour
     void SetWalking(bool walking)
     {
         isWalking = walking;
-        anim.SetBool("IsWalking", isWalking); 
+         anim.SetBool("IsWalking", isWalking); 
     }
 
     void FlipCharacter(bool faceRight)
