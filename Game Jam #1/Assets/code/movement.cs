@@ -12,6 +12,7 @@ public class movement : MonoBehaviour
     public Rigidbody rb;
     private int ground = 1;
     private BoxCollider boxCollider;
+    public float posx,posy;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -24,6 +25,9 @@ public class movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (transform.position.y <-50.0){
+            transform.position = new Vector3(posx,posy,0);
+        }
         //void OnTriggerEnter (Collision eruiuibrui){ ground = 1; Debug.Log("g1");}
         if (Input.GetKey("d"))
         {

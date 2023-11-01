@@ -1057,7 +1057,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1490,7 +1490,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1744242223}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 541d171c2c8b849f692d24f435a74c7a, type: 2}
   m_CullingMode: 0
@@ -1651,7 +1651,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   xmul: 5.07
-  high: 2000
+  high: 1400
   thrust: 0
   rb: {fileID: 0}
 --- !u!114 &1747046196
@@ -1667,8 +1667,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextSceneName: scene2
-  triggerPosition: {x: 460, y: 266}
   transitionAnim: {fileID: 1744242225}
+  targetPosition: {fileID: 0}
 --- !u!1 &1887037057
 GameObject:
   m_ObjectHideFlags: 0
