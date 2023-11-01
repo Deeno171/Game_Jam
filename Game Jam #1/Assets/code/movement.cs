@@ -16,7 +16,6 @@ public class movement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        rb.AddForce(thrust, 0, 0, ForceMode.Impulse);
         boxCollider = GetComponent<BoxCollider>();
 
 
@@ -52,6 +51,6 @@ public class movement : MonoBehaviour
         //bool raycastHit = Physics.BoxCast(boxCollider.bounds.center, transform.localScale, Vector3.down, Quaternion.identity, 20f);
         Vector3 vel = rb.velocity; 
         
-        return vel.y==0;
+        return vel.y<0.01&&vel.y>-0.01;
     }
 }
