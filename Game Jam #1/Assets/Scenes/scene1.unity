@@ -1651,7 +1651,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   xmul: 5.07
-  high: 900
+  high: 2000
   thrust: 0
   rb: {fileID: 0}
 --- !u!114 &1747046196
