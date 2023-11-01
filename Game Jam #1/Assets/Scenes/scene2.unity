@@ -465,12 +465,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 134199987}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 44d41530a13c648969e0ec7ca3065df4, type: 3}
+  m_Script: {fileID: 11500000, guid: e1c245909915f4581b117eba0aee0047, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextSceneName: scene 3
-  transitionAnim: {fileID: 0}
-  targetPosition: {fileID: 0}
+  nextSceneName: scene4
+  triggerPosition: {x: -30, y: 8}
 --- !u!1 &240137850
 GameObject:
   m_ObjectHideFlags: 0

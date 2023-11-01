@@ -1650,10 +1650,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9682dfa1b20c4150a236905dbe0bd3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  xmul: 5.07
-  high: 1400
+  xmul: 20
+  high: 2000
   thrust: 0
   rb: {fileID: 0}
+  posx: 0
+  posy: 0
 --- !u!114 &1747046196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1667,8 +1669,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nextSceneName: scene2
-  transitionAnim: {fileID: 1744242225}
-  targetPosition: {fileID: 0}
+  triggerPosition: {x: 460, y: 260}
 --- !u!1 &1887037057
 GameObject:
   m_ObjectHideFlags: 0
